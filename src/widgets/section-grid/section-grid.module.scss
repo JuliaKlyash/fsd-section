@@ -1,0 +1,158 @@
+@import "@shared/ui/styles/design-tokens.scss";
+
+.wrapper {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	min-height: 0;
+	background-color: $main-white;
+	border: 1px solid $other-divider-default;
+	border-radius: $roundness-header-section;
+	overflow: hidden;
+}
+
+.bodyScroll {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	min-height: 0;
+}
+
+.table {
+	width: 100%;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+
+.colTitle {
+	width: 28%;
+}
+
+.colSubtitle {
+	width: 36%;
+}
+
+.colStage {
+	width: 18%;
+}
+
+.colPriority {
+	width: 18%;
+}
+
+.table thead {
+	background: $gray-25;
+}
+
+.table th {
+	padding: $spacing-base-2m $spacing-base-4m;
+	text-align: left;
+	border-bottom: 1px solid $other-divider-default;
+	color: $main-text-secondary;
+	@include semibold-12px;
+	text-transform: uppercase;
+}
+
+.table td {
+	padding: $spacing-base-3m $spacing-base-4m;
+	border-bottom: 1px solid $other-divider-default;
+	vertical-align: middle;
+	@include regular-14px;
+	color: $main-text-primary;
+}
+
+.row:hover td {
+	background: $choose-elements-dropdown-item-background-hover;
+}
+
+.cellTitle {
+	font-weight: 500;
+}
+
+.cellSubtitle {
+	color: $main-text-secondary;
+}
+
+.cellStage,
+.cellPriority {
+	white-space: nowrap;
+}
+
+.stageBadge,
+.priorityBadge {
+	display: inline-flex;
+	align-items: center;
+	padding: $spacing-base-0-5m $spacing-base-2m;
+	border-radius: $roundness-dropdown-list-item;
+	@include regular-12px;
+}
+
+.stageGrey {
+	background: $kanban-column-grey;
+	color: $gray-700;
+}
+
+.stageBlue {
+	background: $kanban-column-blue;
+	color: $blue-dark-800;
+}
+
+.stageGreen {
+	background: $kanban-column-green;
+	color: $green-800;
+}
+
+.stageOrange {
+	background: $kanban-column-orange;
+	color: $orange-dark-800;
+}
+
+.stagePink {
+	background: $kanban-column-pink;
+	color: $pink-500;
+}
+
+.stagePurple {
+	background: $kanban-column-purple;
+	color: $purple-800;
+}
+
+.stageRed {
+	background: $kanban-column-red;
+	color: $error-700;
+}
+
+.stageYellow {
+	background: $kanban-column-yellow;
+	color: $yellow-800;
+}
+
+.priorityLow {
+	color: $components-kanban-priority-text-low;
+	background: $blue-dark-50;
+}
+
+.priorityMedium {
+	color: $components-kanban-priority-text-medium;
+	background: $warning-50;
+}
+
+.priorityHigh {
+	color: $components-kanban-priority-text-high;
+	background: $error-50;
+}
+
+.priorityCritical {
+	color: $components-kanban-priority-text-critical;
+	background: $pink-50;
+}
+
+.empty {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	min-height: 120px;
+	color: $main-text-secondary;
+	@include regular-14px;
+}

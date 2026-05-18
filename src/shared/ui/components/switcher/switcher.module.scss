@@ -1,0 +1,98 @@
+@import "@shared/ui/styles/design-tokens.scss";
+
+@mixin textWithEllipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	min-width: 0;
+}
+
+@mixin selectedElement {
+	box-shadow: 0 0 0 1px $other-divider-default inset;
+	background: $choose-elements-switcher-item-background-active;
+
+	& > .textContainer {
+		color: $main-text-primary;
+		@include textWithEllipsis;
+	}
+
+	path {
+		fill: $main-text-primary;
+	}
+}
+
+.wrapper {
+	display: flex;
+	align-items: center;
+	box-sizing: border-box;
+	border-radius: $roundness-switcher-default;
+	background: $choose-elements-switcher-background-default;
+	user-select: none;
+	width: 100%;
+	max-width: 100%;
+
+	& > .textContainer {
+		color: $main-text-secondary;
+	}
+
+	& path {
+		fill: $main-text-secondary;
+	}
+}
+
+.errorWrapper {
+	border: 1px solid $choose-elements-switcher-stroke-error;
+}
+
+.wrapElement {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-sizing: border-box;
+	cursor: pointer;
+	user-select: none;
+	gap: $spacing-base-1-5m;
+	padding: $spacing-base-1-5m $spacing-base-3m;
+	border-radius: $roundness-switcher-default;
+	background-color: $choose-elements-switcher-background-default;
+	flex: 1;
+	min-width: 0;
+
+	& > .textContainer {
+		color: $main-text-secondary;
+		@include textWithEllipsis;
+	}
+
+	svg {
+		fill: $main-text-secondary;
+		flex-shrink: 0;
+	}
+}
+
+.smallElement {
+	height: 32px;
+
+	span {
+		@include regular-14px;
+	}
+}
+
+.mediumElement {
+	height: 30px;
+
+	& > .textContainer {
+		@include regular-16px;
+	}
+}
+
+.largeElement {
+	height: 36px;
+
+	& > .textContainer {
+		@include regular-18px;
+	}
+}
+
+.selectedElement {
+	@include selectedElement;
+}

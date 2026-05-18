@@ -1,0 +1,17 @@
+@import "@shared/ui/styles/design-tokens.scss";
+
+.kanbanScroll {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	min-height: 0;
+}
+
+.board {
+	display: flex;
+	gap: $spacing-base-4m;
+	height: 100%;
+	min-height: 0;
+	padding-bottom: $spacing-base-2m;
+	box-sizing: border-box;
+}

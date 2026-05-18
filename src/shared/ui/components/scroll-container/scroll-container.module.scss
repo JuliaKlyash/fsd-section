@@ -1,0 +1,24 @@
+@import "@shared/ui/styles/design-tokens.scss";
+
+.scrollContainer {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	width: 100%;
+	min-height: 0;
+}
+
+.scrollContent {
+	flex: 1;
+	min-height: 0;
+	scrollbar-width: none; // Firefox
+	-ms-overflow-style: none; // IE and Edge
+}
+
+.scrollContent::-webkit-scrollbar {
+	display: none;
+	/* Скрываем скроллбар браузера */
+	width: 0;
+	height: 0;
+}

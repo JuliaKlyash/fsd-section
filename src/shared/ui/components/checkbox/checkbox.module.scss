@@ -1,0 +1,66 @@
+@import "@shared/ui/styles/design-tokens.scss";
+
+.checkboxWrapper {
+	display: inline-flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.fieldOutlined {
+	box-sizing: border-box;
+}
+
+.checkboxContainerDisabled {
+	cursor: default;
+	opacity: 0.6;
+}
+
+.checkbox {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	border: 1px solid $choose-elements-checkbox-stroke-default;
+	background: $choose-elements-checkbox-background-default;
+	flex-shrink: 0;
+}
+
+.checkboxSmall {
+	width: $checkbox-small;
+	height: $checkbox-small;
+	border-radius: $roundness-checkbox-small;
+}
+
+.checkboxMedium {
+	width: $checkbox-medium;
+	height: $checkbox-medium;
+	border-radius: $roundness-checkbox-medium;
+}
+
+.checkboxLarge {
+	width: $checkbox-large;
+	height: $checkbox-large;
+	border-radius: $roundness-checkbox-large;
+}
+
+.checkboxDefault {
+	border-color: $choose-elements-checkbox-stroke-default;
+}
+
+.checkboxError {
+	border-color: $choose-elements-checkbox-stroke-error;
+}
+
+.checkboxDisabled {
+	background: $choose-elements-checkbox-background-disabled;
+	border-color: $gray-300;
+}
+
+.checked {
+	background: $choose-elements-checkbox-background-selected;
+	border-color: $choose-elements-checkbox-stroke-selected;
+}
+
+.icon {
+	fill: $choose-elements-checkbox-icon-default;
+}

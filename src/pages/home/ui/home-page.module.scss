@@ -1,0 +1,29 @@
+@import "@shared/ui/styles/design-tokens.scss";
+
+.sectionPage {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	min-height: 0;
+	overflow: hidden;
+	gap: $spacing-specific-island-spacing;
+}
+
+.content {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	min-height: 0;
+	overflow: hidden;
+
+	> * {
+		flex: 1;
+		min-height: 0;
+	}
+}
+
+.placeholder {
+	margin: 0;
+	color: $main-text-secondary;
+	@include regular-14px;
+}

@@ -1,0 +1,152 @@
+@import "@shared/ui/styles/design-tokens.scss";
+
+@mixin textOverflow {
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+$list_min_width: 200px;
+$list_max_width: 320px;
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	box-sizing: border-box;
+	width: max-content;
+	min-height: $dropdown-min-height;
+	max-height: $dropdown-max-height;
+
+	border-radius: $roundness-dropdown-list;
+	border: 1px solid $other-divider-default;
+	background: $main-white;
+	box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.07);
+	position: fixed;
+	z-index: 100;
+}
+
+.buttonList {
+	min-width: $list_min_width;
+	max-width: $list_max_width;
+}
+
+.searchBox {
+	display: flex;
+	align-items: center;
+	box-sizing: border-box;
+	gap: $spacing-base-1-5m;
+	min-height: 44px;
+	width: 100%;
+	padding: 0px $spacing-base-3m;
+	border-radius: $roundness-new-field-default;
+	background: $components-fields-new-field-select-background-default;
+}
+.searchIcon {
+	fill: $components-fields-new-field-value-default;
+}
+.input {
+	color: $main-text-primary;
+	border: none;
+	outline: none;
+	width: 100%;
+	padding-block: 0;
+	padding-inline: 0;
+	background: inherit;
+
+	color: $main-text-primary;
+	@include regular-14px;
+
+	&::placeholder {
+		color: $main-text-secondary;
+		@include regular-14px;
+		padding-left: 3px;
+	}
+}
+.resultCounter {
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+	width: 100%;
+	min-height: 40px;
+	padding: $spacing-panel-button-block-padding-top-bottom $spacing-base-3m;
+	gap: $spacing-base-1-5m;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+.smallCounterText {
+	color: $main-text-secondary;
+	@include regular-14px;
+	@include textOverflow;
+}
+
+.mediumCounterText {
+	color: $main-text-secondary;
+	@include regular-16px;
+	@include textOverflow;
+}
+
+.largeCounterText {
+	color: $main-text-secondary;
+	@include regular-18px;
+	@include textOverflow;
+}
+
+.body {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	padding: $spacing-base-1-5m;
+	box-sizing: border-box;
+}
+
+.circle {
+	display: flex;
+	padding: $spacing-panel-button-block-padding-top-bottom $spacing-panel-button-block-padding-left-right;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.noMatches {
+	padding: $spacing-panel-block-padding-top-bottom $spacing-panel-block-padding-left-right;
+}
+
+//TODO example стиль
+.itemsGroupHeader {
+	display: flex;
+	align-items: center;
+	height: $base-small-height;
+	padding: 0px $spacing-base-2m;
+	user-select: none;
+
+	span {
+		color: $main-text-secondary;
+		@include uppercase-12px;
+	}
+}
+
+//TODO example стиль
+.item {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: $spacing-base-1-5m $spacing-base-2m;
+	gap: $spacing-base-2m;
+	border-radius: $roundness-dropdown-list-item;
+	user-select: none;
+
+	span {
+		color: $main-text-primary;
+		@include regular-14px;
+		word-break: break-word;
+	}
+
+	&:hover {
+		background: $choose-elements-dropdown-item-background-hover;
+	}
+
+	&:active {
+		background: $choose-elements-dropdown-item-background-selected;
+	}
+}

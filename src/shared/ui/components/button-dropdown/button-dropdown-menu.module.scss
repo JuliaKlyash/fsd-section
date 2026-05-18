@@ -1,0 +1,50 @@
+@import "@shared/ui/styles/design-tokens.scss";
+
+.menu {
+	display: flex;
+	flex-direction: column;
+	min-width: 220px;
+	padding: $spacing-base-0-5m;
+	background: $main-white;
+	border: 1px solid $other-divider-default;
+	border-radius: $roundness-button-default;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.group {
+	display: flex;
+	flex-direction: column;
+
+	&:not(:last-child) {
+		border-bottom: 1px solid $other-divider-default;
+		margin-bottom: $spacing-base-0-5m;
+		padding-bottom: $spacing-base-0-5m;
+	}
+}
+
+.groupHeader {
+	padding: $spacing-base-0-5m $spacing-base-m;
+	@include regular-12px;
+	color: $main-text-secondary;
+}
+
+.menuItem {
+	width: 100%;
+	justify-content: flex-start;
+}
+
+.menuItemDanger {
+	color: $error-600;
+	fill: $error-600;
+
+	& path {
+		fill: $error-600;
+	}
+}
+
+.menuItem {
+	display: flex;
+	align-items: center;
+	gap: $spacing-base-2m;
+	@include regular-12px;
+}

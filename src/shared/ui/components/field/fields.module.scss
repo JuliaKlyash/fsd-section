@@ -1,0 +1,325 @@
+@import "@shared/ui/styles/design-tokens.scss";
+
+@mixin greyBackground {
+	background: $components-fields-new-field-text-background-default;
+}
+
+@mixin whiteBackground {
+	background: $components-fields-new-field-select-background-default;
+}
+
+@mixin greyBorder {
+	outline: 1px solid $components-fields-new-field-inner-shadow-hover;
+}
+
+@mixin errorBorder {
+	outline: 1px solid $components-fields-new-field-inner-shadow-error;
+}
+
+@mixin focusBorder {
+	outline: 1px solid $components-fields-new-field-inner-shadow-focused;
+}
+
+@mixin textWithEllipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.fieldWrap {
+	display: flex;
+	align-items: center;
+	padding: $spacing-specific-new-field-top-bottom $spacing-specific-new-field-left-right;
+	border-radius: $roundness-new-field-default;
+	@include greyBackground;
+	gap: $spacing-base-1-5m;
+	box-sizing: border-box;
+	min-width: 0;
+
+	&:hover:not(:has(input:focus)):not(.fieldFocused):not(.errorField):not(.selectFieldWrap) {
+		@include greyBorder;
+		@include greyBackground;
+	}
+
+	&:has(input:focus) {
+		@include focusBorder;
+	}
+
+	&.placeholderFocus input:focus::placeholder {
+		opacity: 0.5;
+	}
+
+	input:focus+.visibleCount {
+		visibility: visible;
+	}
+
+	&:has(input:focus) .leftIcon {
+		& path {
+			fill: $components-fields-new-field-value-default;
+		}
+	}
+}
+
+.defaultFieldWrap {
+	@include greyBackground;
+}
+
+.searchFieldWrap {
+	@include whiteBackground;
+
+	outline: 1px solid $components-fields-new-field-select-inner-shadow-default;
+
+	&:hover:not(:has(input:focus)):not(.fieldFocused):not(.errorField) {
+		@include greyBackground;
+	}
+
+	&:has(input:focus) {
+		@include whiteBackground;
+	}
+}
+
+.selectFieldWrap {
+	@include whiteBackground;
+	outline: 1px solid $components-fields-new-field-select-inner-shadow-default;
+
+	&:hover {
+		background: $components-fields-new-field-select-background-hover;
+	}
+}
+
+.selectText {
+	@include textWithEllipsis;
+}
+
+.fieldFocused {
+	@include focusBorder;
+}
+
+.input {
+	color: $main-text-primary;
+	border: none;
+	outline: none;
+	width: 100%;
+	padding-block: 0;
+	padding-inline: 0;
+	background: inherit;
+
+	&::placeholder {
+		color: $main-text-secondary;
+	}
+}
+
+.smallInput {
+	@include regular-14px;
+}
+
+.mediumInput {
+	@include regular-16px;
+}
+
+.largeInput {
+	@include regular-18px;
+}
+
+.smallField {
+	height: 32px;
+}
+
+.mediumField {
+	height: 40px;
+}
+
+.largeField {
+	height: 48px;
+}
+
+.disabledField {
+	background-color: $components-fields-new-field-select-background-default;
+	outline: 1px solid $components-fields-new-field-select-inner-shadow-default;
+
+	input {
+		color: $components-fields-new-field-value-default;
+		@include regular-14px;
+	}
+}
+
+.errorField {
+	@include errorBorder;
+}
+
+.leftIcon {
+	display: flex;
+	align-items: center;
+
+	& path {
+		fill: $components-fields-new-field-value-icon-default;
+	}
+}
+
+.counter {
+	color: $components-fields-input-counter-default;
+	@include regular-12px;
+	visibility: hidden;
+}
+
+.selectIconsBlock {
+	display: flex;
+	align-items: center;
+	gap: $spacing-base-m;
+	margin-left: auto;
+}
+
+.defaultButtonContainer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.searchButton {
+	fill: $main-text-secondary;
+}
+
+.dropdownButton {
+	fill: $components-fields-new-field-value-default;
+}
+
+.textClearButtonContainer {
+	visibility: hidden;
+}
+
+.clearButton {
+	fill: $popup-elements-modal-window-icon-close-default;
+}
+
+.lockerButton {
+	fill: $components-fields-new-field-value-default;
+}
+
+.visible {
+	visibility: visible;
+}
+
+.controlButton {
+	fill: $main-text-secondary;
+	height: min-content;
+}
+
+.controlButtonWrap {
+	display: flex;
+	width: 16px;
+	height: 8px;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	&.controlButtonFocused {
+		background-color: $components-fields-increaser-background-input-focused;
+		border-radius: 1px;
+
+		path {
+			stroke: $components-fields-increaser-icon-input-focused;
+		}
+	}
+}
+
+.buttonsWrap {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+	margin-right: 6px;
+}
+
+.selectValue {
+	white-space: nowrap;
+}
+
+.selectValueContent {
+	display: flex;
+	align-items: center;
+	flex: 1 1 auto;
+	min-width: 0;
+	overflow: hidden;
+}
+
+.selectValueContent>* {
+	min-width: 0;
+	max-width: 100%;
+}
+
+.smallSelectValue {
+	height: 20px;
+}
+
+.mediumSelectValue {
+	height: 22px;
+}
+
+.largeSelectValue {
+	height: 24px;
+}
+
+
+.defaultPlaceholder {
+	color: $components-fields-new-field-value-placeholder;
+}
+
+//TODO example стиль
+.exampleWrap {
+	width: 600px;
+	height: 400px;
+	background-color: aliceblue;
+	padding: 20px;
+	overflow-x: hidden;
+	max-height: 500px;
+	border: 1px solid blue;
+
+	&>div>div:last-child {
+		width: 240px;
+	}
+}
+
+.itemsGroupHeader {
+	display: flex;
+	align-items: center;
+	padding: $spacing-base-2m $spacing-base-2m $spacing-base-m $spacing-base-2m;
+	user-select: none;
+
+	span {
+		color: $main-text-secondary;
+		@include uppercase-12px;
+	}
+}
+
+//TODO example стиль
+.item {
+	display: flex;
+	padding: $spacing-base-1-5m $spacing-base-2m;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: $spacing-base-2m;
+	border-radius: $roundness-dropdown-list-item;
+	user-select: none;
+
+	span {
+		color: $main-text-primary;
+		@include regular-14px;
+		word-break: break-word;
+	}
+
+	&:hover {
+		background: $choose-elements-dropdown-item-background-hover;
+	}
+
+	&:active {
+		background: $choose-elements-dropdown-item-background-selected;
+	}
+}
+
+.selectorWrapper {
+	position: relative;
+}

@@ -1,0 +1,202 @@
+@import "@shared/ui/styles/design-tokens.scss";
+
+.button {
+	width: fit-content;
+	position: relative;
+	border-radius: $roundness-button-default;
+	padding: $spacing-base-1-5m $spacing-base-2m;
+	border: 1px solid transparent;
+	outline: none;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: $spacing-base-2m;
+	cursor: pointer;
+	box-sizing: border-box;
+	white-space: nowrap;
+
+	transition:
+		background-color 0.15s ease,
+		border-color 0.15s ease,
+		color 0.15s ease;
+
+	.text {
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+}
+
+.small {
+	height: $base-small-height;
+	@include regular-14px;
+}
+
+.medium {
+	@include regular-16px;
+	padding: $spacing-base-2m $spacing-base-3m;
+}
+
+.large {
+	@include regular-18px;
+	padding: $spacing-base-2-5m $spacing-base-4m;
+}
+
+// variants
+
+.backless {
+	border-color: $actions-button-border-default;
+	color: $main-text-primary;
+	fill: $main-text-primary;
+	background-color: transparent;
+
+	&:hover {
+		background: $actions-button-background-default-hover;
+	}
+
+	&:active {
+		background: $actions-button-background-default-pressed;
+	}
+
+	&.disableBorder {
+		border-color: transparent;
+	}
+}
+
+.default {
+	border-color: $actions-button-border-default;
+	color: $main-text-primary;
+	fill: $main-text-primary;
+	background: $actions-button-background-default-default;
+
+	&:hover {
+		background: $actions-button-background-default-hover;
+	}
+
+	&:active {
+		background: $actions-button-background-default-pressed;
+	}
+
+	&.disableBorder {
+		border-color: $actions-button-background-default-default;
+	}
+}
+
+.primary {
+	background: $actions-button-background-primary-default;
+	border-color: $actions-button-border-primary;
+	color: $actions-button-text-default;
+	fill: $actions-button-text-default;
+
+	&:hover {
+		background: $actions-button-background-primary-hover;
+	}
+
+	&:active {
+		background: $actions-button-background-primary-pressed;
+	}
+
+	&.disableBorder {
+		border-color: $actions-button-background-primary-default;
+	}
+}
+
+.secondary {
+	background: $actions-button-background-secondary-default;
+	border-color: $actions-button-border-secondary;
+	color: $actions-button-text-secondary;
+	fill: $actions-button-text-secondary;
+
+	& path {
+		fill: $actions-button-text-secondary;
+	}
+
+	&:hover {
+		background: $actions-button-background-secondary-hover;
+	}
+
+	&:active {
+		background: $actions-button-background-secondary-pressed;
+	}
+
+	&.disableBorder {
+		border-color: $actions-button-background-secondary-default;
+	}
+}
+
+.success {
+	background: $actions-button-background-success-default;
+	border-color: $actions-button-border-success;
+	color: $actions-button-text-default;
+	fill: $actions-button-text-default;
+
+	&:hover {
+		background: $actions-button-background-success-hover;
+	}
+
+	&:active {
+		background: $actions-button-background-success-pressed;
+	}
+
+	&.disableBorder {
+		border-color: $actions-button-background-success-default;
+	}
+}
+
+.danger {
+	background: $actions-button-background-danger-default;
+	border-color: $actions-button-border-danger;
+	color: $actions-button-text-default;
+	fill: $actions-button-text-default;
+
+	&:hover {
+		background: $actions-button-background-danger-hover;
+	}
+
+	&:active {
+		background: $actions-button-background-danger-pressed;
+	}
+
+	&.disableBorder {
+		border-color: $actions-button-background-danger-default;
+	}
+}
+
+.caution {
+	background: $actions-button-background-warning-default;
+	border-color: $actions-button-border-warning;
+	color: $actions-button-text-default;
+	fill: $actions-button-text-default;
+
+	&:hover {
+		background: $actions-button-background-warning-hover;
+	}
+
+	&:active {
+		background: $actions-button-background-warning-pressed;
+	}
+
+	&.disableBorder {
+		border-color: $actions-button-background-warning-default;
+	}
+}
+
+.loading {
+	border-color: $actions-button-background-loading-default;
+	color: $actions-button-text-loading;
+	stroke: transparent;
+
+	& path {
+		fill: $actions-button-text-loading;
+	}
+}
+
+.disabled {
+	border-color: $actions-button-border-default;
+	color: $actions-button-text-loading;
+	cursor: default;
+
+	& path {
+		fill: $actions-button-text-loading;
+	}
+}
+

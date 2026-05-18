@@ -1,0 +1,303 @@
+// Primitives (colors)
+$main-black: #101323;
+$main-white: #ffffff;
+
+$gray-25: #fcfcfd;
+$gray-50: #f9fafb;
+$gray-75: #f6f7f9;
+$gray-100: #f2f4f7;
+$gray-200: #eaecf0;
+$gray-300: #d0d5dd;
+$gray-400: #98a2b3;
+$gray-500: #667085;
+$gray-600: #475467;
+$gray-700: #344054;
+$gray-800: #1d2939;
+$gray-900: #101828;
+
+$gray-blue-900: #101323;
+
+$indigo-25: #f5f8ff;
+$indigo-50: #eef4ff;
+$indigo-100: #e0eaff;
+$indigo-200: #c7d7fe;
+$indigo-300: #a4bcfd;
+$indigo-400: #8098f9;
+$indigo-500: #6172f3;
+$indigo-600: #444ce7;
+$indigo-700: #3538cd;
+$indigo-800: #2d31a6;
+
+$blue-light-200: #b9e6fe;
+$blue-dark-50: #eff4ff;
+$blue-dark-500: #2970ff;
+$blue-dark-800: #0040c1;
+
+$green-50: #edfcf2;
+$green-800: #095c37;
+
+$orange-dark-50: #fff4ed;
+$orange-dark-800: #97180c;
+
+$pink-50: #fdf2fa;
+$pink-500: #ee46bc;
+
+$purple-50: #f9f5ff;
+$purple-800: #53389e;
+
+$yellow-50: #fefbe8;
+$yellow-800: #854a0e;
+
+$error-50: #fef3f2;
+$error-100: #fee4e2;
+$error-200: #fecdca;
+$error-300: #fda29b;
+$error-500: #f04438;
+$error-600: #d92d20;
+$error-700: #b42318;
+
+$success-25: #f6fef9;
+$success-50: #ecfdf3;
+$success-100: #d1fadf;
+$success-300: #6ce9a6;
+$success-500: #12b76a;
+$success-600: #039855;
+$success-700: #027a48;
+
+$warning-25: #fffcf5;
+$warning-50: #fffaeb;
+$warning-100: #fef0c7;
+$warning-200: #fedf89;
+$warning-300: #fec84b;
+$warning-400: #fdb022;
+$warning-500: #f79009;
+$warning-600: #dc6803;
+$warning-700: #b54708;
+$warning-800: #93370d;
+$warning-900: #7a2e0e;
+
+// Spacing
+$spacing-base-0-25m: 1px;
+$spacing-base-0-5m: 2px;
+$spacing-base-m: 4px;
+$spacing-base-1-5m: 6px;
+$spacing-base-2m: 8px;
+$spacing-base-2-5m: 10px;
+$spacing-base-3m: 12px;
+$spacing-base-4m: 16px;
+$spacing-base-5m: 20px;
+$spacing-base-6m: 24px;
+$spacing-base-7m: 28px;
+$spacing-base-8m: 32px;
+$spacing-base-9m: 36px;
+$spacing-base-10m: 40px;
+$spacing-base-11m: 44px;
+$spacing-base-12m: 48px;
+$spacing-base-13m: 52px;
+$spacing-base-14m: 56px;
+$spacing-base-15m: 60px;
+
+$spacing-panel-block-padding-top-bottom: $spacing-base-2m;
+$spacing-panel-block-padding-left-right: $spacing-base-4m;
+$spacing-panel-button-block-padding-top-bottom: $spacing-panel-block-padding-top-bottom;
+$spacing-panel-button-block-padding-left-right: $spacing-base-2m;
+$spacing-panel-button-block-gap: $spacing-base-1-5m;
+$spacing-specific-island-spacing: $spacing-base-1-5m;
+$spacing-specific-new-field-top-bottom: $spacing-base-1-5m;
+$spacing-specific-new-field-left-right: $spacing-base-2m;
+
+// Sizes
+$base-small-height: 32px;
+$dropdown-min-height: 40px;
+$dropdown-max-height: 304px;
+$hint-max-width: 250px;
+$input-horizontal-layout-width-small: 240px;
+$input-horizontal-layout-width-medium: 280px;
+$input-horizontal-layout-width-large: 320px;
+$scrollbar-width-default: 4px;
+$scrollbar-width-hover: 12px;
+$kanban-column-min-width-small: 256px;
+$kanban-column-min-width-medium: 400px;
+
+// Roundness
+$roundness-button-default: 8px;
+$roundness-dropdown-list: 8px;
+$roundness-dropdown-list-item: 4px;
+$roundness-header-section: 12px;
+$roundness-hint: 8px;
+$roundness-new-field-default: 8px;
+$roundness-scroller-default: 2px;
+$roundness-scroller-hover: 12px;
+$roundness-switcher-default: 8px;
+$roundness-kanban-card: 8px;
+$roundness-kanban-column: 12px;
+$roundness-kanban-column-intermediate: 4px;
+$roundness-checkbox-small: 4px;
+$roundness-checkbox-medium: 6px;
+$roundness-checkbox-large: 8px;
+
+$checkbox-small: 16px;
+$checkbox-medium: 20px;
+$checkbox-large: 24px;
+
+// Semantic colors
+$main-text-primary: $main-black;
+$main-text-primary-white: $main-white;
+$main-text-secondary: $gray-400;
+$main-text-linked: $indigo-600;
+
+$other-divider-default: $gray-200;
+$other-scroller-background-default: $gray-300;
+
+$actions-button-background-danger-default: $error-500;
+$actions-button-background-danger-hover: $error-600;
+$actions-button-background-danger-pressed: $error-700;
+$actions-button-background-default-default: $main-white;
+$actions-button-background-default-hover: $gray-200;
+$actions-button-background-default-pressed: $gray-300;
+$actions-button-background-loading-default: $gray-200;
+$actions-button-background-primary-default: $indigo-600;
+$actions-button-background-primary-hover: $indigo-700;
+$actions-button-background-primary-pressed: $indigo-800;
+$actions-button-background-secondary-default: $indigo-25;
+$actions-button-background-secondary-hover: $indigo-100;
+$actions-button-background-secondary-pressed: $indigo-300;
+$actions-button-background-success-default: $success-500;
+$actions-button-background-success-hover: $success-600;
+$actions-button-background-success-pressed: $success-700;
+$actions-button-background-warning-default: $warning-500;
+$actions-button-background-warning-hover: $warning-600;
+$actions-button-background-warning-pressed: $warning-700;
+$actions-button-border-danger: $error-500;
+$actions-button-border-default: $gray-200;
+$actions-button-border-primary: $indigo-600;
+$actions-button-border-secondary: $indigo-500;
+$actions-button-border-success: $success-500;
+$actions-button-border-warning: $warning-500;
+$actions-button-text-default: $main-white;
+$actions-button-text-disabled: $gray-400;
+$actions-button-text-loading: $gray-400;
+$actions-button-text-secondary: $indigo-600;
+
+$choose-elements-dropdown-item-background-hover: $indigo-50;
+$choose-elements-dropdown-item-background-selected: $indigo-100;
+$choose-elements-switcher-background-default: $gray-100;
+$choose-elements-switcher-item-background-active: $main-white;
+$choose-elements-switcher-stroke-error: $error-500;
+
+$choose-elements-checkbox-background-default: $main-white;
+$choose-elements-checkbox-background-disabled: $gray-200;
+$choose-elements-checkbox-background-selected: $indigo-600;
+$choose-elements-checkbox-icon-default: $main-white;
+$choose-elements-checkbox-stroke-default: $gray-300;
+$choose-elements-checkbox-stroke-error: $error-500;
+$choose-elements-checkbox-stroke-selected: $indigo-600;
+
+$components-fields-icon-info-default: $gray-300;
+$components-fields-icon-info-hover: $gray-500;
+$components-fields-icon-is-required-default: $error-500;
+$components-fields-increaser-background-input-focused: $indigo-50;
+$components-fields-increaser-icon-input-focused: $indigo-600;
+$components-fields-input-counter-default: $gray-400;
+$components-fields-input-label-default: $gray-400;
+$components-fields-input-value-linked: $main-text-linked;
+$components-fields-new-field-inner-shadow-error: $error-500;
+$components-fields-new-field-inner-shadow-focused: $indigo-600;
+$components-fields-new-field-inner-shadow-hover: $gray-200;
+$components-fields-new-field-select-background-default: $main-white;
+$components-fields-new-field-select-background-hover: $gray-100;
+$components-fields-new-field-select-inner-shadow-default: $gray-200;
+$components-fields-new-field-text-background-default: $gray-75;
+$components-fields-new-field-value-default: $main-text-primary;
+$components-fields-new-field-value-icon-default: $main-text-secondary;
+$components-fields-new-field-value-placeholder: $main-text-secondary;
+
+$popup-elements-hint-background: $gray-800;
+$popup-elements-modal-window-icon-close-default: $gray-400;
+
+$kanban-column-grey: $gray-75;
+$kanban-column-blue: $blue-dark-50;
+$kanban-column-green: $green-50;
+$kanban-column-orange: $orange-dark-50;
+$kanban-column-pink: $pink-50;
+$kanban-column-purple: $purple-50;
+$kanban-column-red: $error-50;
+$kanban-column-yellow: $yellow-50;
+
+$components-kanban-column-background-default: $gray-25;
+$components-kanban-column-title-default: $gray-500;
+$components-kanban-column-title-hover: $gray-800;
+$components-kanban-column-border-default: $indigo-700;
+$components-kanban-column-border-allowed: $success-500;
+$components-kanban-column-background-forbidden: $error-200;
+$components-kanban-item-default-background-default: $main-white;
+$components-kanban-item-default-border-selected: $indigo-200;
+$components-kanban-priority-text-low: $blue-dark-500;
+$components-kanban-priority-text-medium: $warning-500;
+$components-kanban-priority-text-high: $error-500;
+$components-kanban-priority-text-critical: $pink-500;
+
+// Typography mixins (used in components)
+@mixin regular-12px {
+    font-size: 12px;
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+@mixin regular-14px {
+    font-size: 14px;
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+@mixin regular-16px {
+    font-size: 16px;
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+@mixin regular-18px {
+    font-size: 18px;
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+@mixin regular-24px {
+    font-size: 24px;
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+@mixin h5-•-regular {
+    font-size: 32px;
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    line-height: 40px;
+}
+
+@mixin uppercase-12px {
+    font-size: 12px;
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.07em;
+    line-height: 16px;
+    text-transform: uppercase;
+}
+
+@mixin effect-style-kanban-card() {
+	box-shadow:
+		0 2px 2px rgba(16, 19, 35, 0.08),
+		0 0 2px rgba(16, 19, 35, 0.06);
+}
+
+@mixin semibold-12px {
+	font-size: 12px;
+	font-family: Inter, sans-serif;
+	font-weight: 600;
+	line-height: 16px;
+}

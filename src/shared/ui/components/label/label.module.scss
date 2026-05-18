@@ -1,0 +1,109 @@
+@import "@shared/ui/styles/design-tokens.scss";
+
+.labelWrapper {
+	display: grid;
+	box-sizing: border-box;
+	width: 100%;
+	min-width: 0;
+
+	&:not(.labelWrapperRow) {
+		row-gap: $spacing-base-m;
+	}
+
+	&.labelWrapperRow {
+		column-gap: $spacing-base-3m;
+		grid-template-columns: auto 1fr;
+
+		& .smallLabel {
+			min-width: $input-horizontal-layout-width-small;
+			max-width: $input-horizontal-layout-width-small;
+		}
+
+		& .mediumLabel {
+			min-width: $input-horizontal-layout-width-medium;
+			max-width: $input-horizontal-layout-width-medium;
+		}
+
+		& .largeLabel {
+			min-width: $input-horizontal-layout-width-large;
+			max-width: $input-horizontal-layout-width-large;
+		}
+	}
+}
+
+.label {
+	color: $main-text-primary;
+	width: 100%;
+	word-wrap: break-word; /* Для старых браузеров */
+	overflow-wrap: break-word;
+	white-space: normal;
+	hyphens: none;
+	min-width: 0;
+
+	& > *,
+	& .hint {
+		display: inline;
+	}
+
+	& svg {
+		min-width: max-content;
+	}
+}
+
+.requiredStar {
+	margin-left: $spacing-base-0-5m;
+	fill: $components-fields-icon-is-required-default;
+}
+
+.info {
+	margin-left: $spacing-base-0-5m;
+	fill: $components-fields-icon-info-default;
+
+	&:hover {
+		fill: $components-fields-icon-info-hover;
+		cursor: pointer;
+	}
+}
+.labelTextWrap {
+	// word-wrap: break-word; /* Для старых браузеров */
+	// overflow-wrap: break-word;
+	// white-space: normal;
+	// hyphens: none;
+	// width: 100%;
+
+	&.smallText {
+		@include regular-14px;
+	}
+
+	&.mediumText {
+		@include regular-16px;
+	}
+
+	&.largeText {
+		@include regular-18px;
+	}
+
+	&.blackText {
+		color: $main-text-primary;
+	}
+
+	&.grayText {
+		color: $components-fields-input-label-default;
+	}
+}
+
+@keyframes Error {
+	0% {
+		background-color: $blue-light-200;
+	}
+
+	100% {
+		background-color: transparent;
+	}
+}
+
+.errorAnimation {
+	input {
+		animation: Error 300ms ease-out both;
+	}
+}

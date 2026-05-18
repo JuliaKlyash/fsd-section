@@ -1,0 +1,40 @@
+@import "@shared/ui/styles/design-tokens.scss";
+
+.searchBox {
+	display: flex;
+	align-items: center;
+	box-sizing: border-box;
+	gap: $spacing-base-1-5m;
+	min-height: 44px;
+	width: 100%;
+	padding: 0px $spacing-base-3m;
+	border-radius: $roundness-new-field-default;
+	background: $components-fields-new-field-select-background-default;
+}
+
+.searchIcon {
+	fill: $components-fields-new-field-value-default;
+	flex-shrink: 0;
+}
+
+.input {
+	color: $main-text-primary;
+	border: none;
+	outline: none;
+	width: 100%;
+	padding-block: 0;
+	padding-inline: 0;
+	background: inherit;
+
+	color: $main-text-primary;
+	@include regular-14px;
+
+	&::placeholder {
+		color: $main-text-secondary;
+		@include regular-14px;
+		padding-left: 3px;
+	}
+	&:placeholder-shown {
+		text-overflow: ellipsis;
+	}
+}

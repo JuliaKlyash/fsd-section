@@ -1,0 +1,77 @@
+@import "@shared/ui/styles/design-tokens.scss";
+
+.verticalScrollTrack {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: calc($scrollbar-width-hover + 2px);
+	/* Ширина скроллбара + padding */
+	pointer-events: none;
+	opacity: 0;
+	/* Начальное значение прозрачности */
+	transition: opacity 0.3s ease;
+	/* Плавный переход для прозрачности */
+	z-index: 19;
+}
+
+.verticalScrollTrack.visible {
+	opacity: 1;
+	/* Полная непрозрачность при видимости */
+}
+
+.horizontalScrollTrack {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: calc($scrollbar-width-hover + 2px);
+	/* Ширина скроллбара + padding */
+	pointer-events: none;
+	opacity: 0;
+	/* Начальное значение прозрачности */
+	transition: opacity 0.3s ease;
+	/* Плавный переход для прозрачности */
+	z-index: 19;
+}
+
+.horizontalScrollTrack.visible {
+	opacity: 1;
+	/* Полная непрозрачность при видимости */
+}
+
+.defaultScroll {
+	position: absolute;
+	border-radius: $roundness-scroller-default;
+	background-color: $other-scroller-background-default;
+	transition: all 0.1s ease;
+	pointer-events: auto;
+	cursor: pointer;
+}
+
+.verticalScroll {
+	top: 0;
+	right: 2px;
+	width: $scrollbar-width-default;
+	/* Ширина скроллбара */
+}
+
+.horizontalScroll {
+	bottom: 2px;
+	left: 0;
+	height: $scrollbar-width-default;
+	/* Ширина скроллбара */
+}
+
+.scrollHidden {
+	display: none;
+}
+
+.verticalScrollHover {
+	width: $scrollbar-width-hover;
+	border-radius: $roundness-scroller-hover;
+}
+
+.horizontalScrollHover {
+	height: $scrollbar-width-hover;
+	border-radius: $roundness-scroller-hover;
+}

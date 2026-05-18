@@ -1,0 +1,36 @@
+@import "@shared/ui/styles/design-tokens.scss";
+
+.inputLink {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+
+	&:not(.disabledLink) {
+		color: $components-fields-input-value-linked;
+		text-decoration: none;
+	}
+
+	&:hover:not(.disabledLink) {
+		text-decoration: underline;
+	}
+}
+
+.smallInput {
+	@include regular-14px;
+}
+
+.mediumInput {
+	@include regular-16px;
+}
+
+.largeInput {
+	@include regular-18px;
+}
+
+.disabledLink {
+	pointer-events: none;
+	text-decoration: none;
+	&:hover {
+		text-decoration: none;
+	}
+}

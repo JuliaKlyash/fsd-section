@@ -1,0 +1,1 @@
+export { HeadIsland } from './head-island';

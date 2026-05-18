@@ -1,0 +1,102 @@
+@import "@shared/ui/styles/design-tokens.scss";
+
+.column {
+	display: flex;
+	flex-direction: column;
+	flex-shrink: 0;
+	height: 100%;
+	min-height: 0;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-shrink: 0;
+	gap: $spacing-base-2m;
+	padding: $spacing-base-2m $spacing-base-3m;
+	border-radius: $roundness-kanban-column-intermediate $roundness-kanban-column-intermediate 0 0;
+	border-bottom: 2px solid transparent;
+}
+
+.header_grey {
+	background: $kanban-column-grey;
+	border-bottom-color: $gray-500;
+}
+
+.header_blue {
+	background: $kanban-column-blue;
+	border-bottom-color: $blue-dark-500;
+}
+
+.header_green {
+	background: $kanban-column-green;
+	border-bottom-color: $success-500;
+}
+
+.header_orange {
+	background: $kanban-column-orange;
+	border-bottom-color: $warning-500;
+}
+
+.header_pink {
+	background: $kanban-column-pink;
+	border-bottom-color: $pink-500;
+}
+
+.header_purple {
+	background: $kanban-column-purple;
+	border-bottom-color: $purple-800;
+}
+
+.header_red {
+	background: $kanban-column-red;
+	border-bottom-color: $error-500;
+}
+
+.header_yellow {
+	background: $kanban-column-yellow;
+	border-bottom-color: $warning-600;
+}
+
+.title {
+	margin: 0;
+	color: $components-kanban-column-title-default;
+	@include semibold-12px;
+
+	&:hover {
+		color: $components-kanban-column-title-hover;
+	}
+}
+
+.count {
+	color: $main-text-secondary;
+	@include regular-12px;
+}
+
+.cardsScroll {
+	flex: 1;
+	min-height: 0;
+	border: 1px solid $other-divider-default;
+	border-top: none;
+	border-radius: 0 0 $roundness-kanban-column $roundness-kanban-column;
+	background: $components-kanban-column-background-default;
+}
+
+.cardsInner {
+	display: flex;
+	flex-direction: column;
+	gap: $spacing-base-2m;
+	min-height: 100%;
+	padding: $spacing-base-2m;
+	box-sizing: border-box;
+}
+
+.cardsDraggingOver {
+	outline: 2px solid $components-kanban-column-border-allowed;
+	outline-offset: -2px;
+}
+
+.cardsDropDisabled {
+	background: $components-kanban-column-background-forbidden;
+}

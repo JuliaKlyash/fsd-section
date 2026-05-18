@@ -1,0 +1,57 @@
+@import "@shared/ui/styles/design-tokens.scss";
+
+.card {
+	display: flex;
+	flex-direction: column;
+	gap: $spacing-base-1-5m;
+	box-sizing: border-box;
+	width: 100%;
+	padding: $spacing-base-2m;
+	border: 1px solid $other-divider-default;
+	border-radius: $roundness-kanban-card;
+	background: $components-kanban-item-default-background-default;
+	@include effect-style-kanban-card;
+}
+
+.cardDragging {
+	border-color: $components-kanban-item-default-border-selected;
+}
+
+.title {
+	margin: 0;
+	color: $main-text-primary;
+	@include semibold-12px;
+}
+
+.subtitle {
+	margin: 0;
+	color: $main-text-secondary;
+	@include regular-12px;
+}
+
+.priority {
+	align-self: flex-start;
+	padding: $spacing-base-0-5m $spacing-base-1-5m;
+	border-radius: $roundness-kanban-column-intermediate;
+	@include regular-12px;
+}
+
+.priority_low {
+	color: $components-kanban-priority-text-low;
+	background: $kanban-column-blue;
+}
+
+.priority_medium {
+	color: $components-kanban-priority-text-medium;
+	background: $kanban-column-yellow;
+}
+
+.priority_high {
+	color: $components-kanban-priority-text-high;
+	background: $kanban-column-red;
+}
+
+.priority_critical {
+	color: $components-kanban-priority-text-critical;
+	background: $kanban-column-pink;
+}

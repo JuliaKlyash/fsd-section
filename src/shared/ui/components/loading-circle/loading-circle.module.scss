@@ -1,0 +1,15 @@
+@import "@shared/ui/styles/design-tokens.scss";
+
+.spinner {
+	fill: $main-text-secondary;
+	animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}

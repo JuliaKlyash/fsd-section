@@ -1,0 +1,35 @@
+@import "@shared/ui/styles/design-tokens.scss";
+
+.hintWrapper {
+	display: flex;
+}
+
+.hint {
+	display: inline;
+	visibility: hidden;
+	pointer-events: none;
+
+	&.hintVisible {
+		transition-delay: 400ms;
+		visibility: visible;
+	}
+	position: fixed;
+	z-index: 105;
+
+	box-sizing: border-box;
+	width: max-content;
+	max-width: $hint-max-width;
+	padding: $spacing-base-2m $spacing-base-3m;
+	border-radius: $roundness-hint;
+	background-color: $popup-elements-hint-background;
+	color: $main-text-primary-white;
+	white-space: pre-wrap;
+}
+
+.hintFont {
+	@include regular-12px;
+}
+
+.hintLargeFont {
+	@include regular-18px;
+}

@@ -1,0 +1,1 @@
+export { CustomLinkComponent } from './custom-link-component';

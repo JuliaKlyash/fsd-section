@@ -1,0 +1,143 @@
+@import "@shared/ui/styles/design-tokens.scss";
+
+@mixin activeItem {
+	background: $choose-elements-dropdown-item-background-selected;
+}
+
+@mixin primaryText {
+	user-select: none;
+	color: $main-text-primary;
+}
+
+.container {
+	background-color: $main-white;
+	border: 1px solid $other-divider-default;
+	border-radius: $roundness-header-section;
+
+	&>div:first-child {
+		border-bottom: 1px solid $other-divider-default;
+		height: 31px;
+	}
+
+	&>div:last-child {
+		height: 32px;
+	}
+
+	&>.block {
+		display: flex;
+		justify-content: space-between;
+
+		height: calc(48px - $spacing-base-2m * 2);
+		padding: $spacing-base-2m;
+
+		&.upperBlock {}
+
+		&>.headControllers {
+			display: flex;
+
+			height: 32px;
+			gap: $spacing-panel-button-block-gap;
+			align-items: center;
+		}
+
+		&>.rightBlock {
+			display: flex;
+			gap: $spacing-panel-button-block-gap;
+		}
+	}
+}
+
+.title {
+	color: $main-text-primary;
+	user-select: none;
+}
+
+.titlesmall {
+	@include regular-18px;
+}
+
+.titlemedium {
+	@include regular-24px;
+}
+
+.titlelarge {
+	@include h5-•-regular;
+}
+
+.sort {
+	display: inline-flex;
+	align-items: center;
+	gap: $spacing-base-0-5m;
+}
+
+.iconButton button {
+	border-radius: $roundness-button-default 0 0 $roundness-button-default;
+}
+
+.textButton button {
+	border-radius: 0 $roundness-button-default $roundness-button-default 0;
+}
+
+.secondRow {
+	align-items: center;
+	gap: $spacing-base-m;
+}
+
+.sections {
+	display: flex;
+	align-items: center;
+	gap: $spacing-base-0-5m;
+	flex-shrink: 0;
+}
+
+.sectionButton {
+	border: 1px solid $other-divider-default;
+	border-radius: $roundness-button-default;
+	background: transparent;
+	cursor: pointer;
+	color: $main-text-secondary;
+	padding: $spacing-base-0-5m $spacing-base-m;
+	@include regular-14px;
+
+	&:hover {
+		color: $main-text-primary;
+	}
+}
+
+.sectionButtonActive {
+	background: $choose-elements-dropdown-item-background-selected;
+	border-color: transparent;
+	color: $main-text-primary;
+}
+
+.dialogFooter {
+	display: flex;
+	position: relative;
+}
+
+.dialogFooter>* {
+	min-width: 107px;
+}
+
+.dialogFooter>*:first-child {
+	margin-left: auto;
+}
+
+.dialogFooter>*:not(:last-child) {
+	margin-right: 10px;
+}
+
+.warningText {
+	font-size: 22px;
+	line-height: 26px;
+	font-family: var(--font-roboto-700);
+	color: $gray-blue-900;
+}
+
+.warningText span {
+	font-size: 18px;
+	line-height: 30px;
+	font-weight: 600;
+	color: $gray-900;
+	flex-grow: 1;
+}

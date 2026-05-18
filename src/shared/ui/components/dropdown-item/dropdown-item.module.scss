@@ -1,0 +1,40 @@
+@import "@shared/ui/styles/design-tokens.scss";
+
+.dropdownItem {
+	display: flex;
+	padding: $spacing-base-1-5m $spacing-base-2m;
+	flex-direction: row;
+	align-items: center;
+	gap: $spacing-base-2m;
+	border-radius: $roundness-dropdown-list-item;
+	user-select: none;
+	cursor: pointer;
+
+	width: 100%;
+	border: none;
+	background: none;
+
+	.title {
+		text-align: left;
+		color: $main-text-primary;
+		@include regular-14px;
+		word-break: break-word;
+	}
+
+	.icon {
+		flex: 0 0 auto;
+		display: flex;
+	}
+
+	&:not(.disabled):hover {
+		background: $choose-elements-dropdown-item-background-hover;
+	}
+
+	&:not(.disabled):active {
+		background: $choose-elements-dropdown-item-background-selected;
+	}
+
+	&.disabled {
+		opacity: 0.5;
+	}
+}
