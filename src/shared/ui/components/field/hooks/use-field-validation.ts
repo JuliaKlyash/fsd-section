@@ -15,16 +15,15 @@ type UseFieldValidationParams<TValue> = {
 };
 
 /**
- * Унифицированная валидация для UI-kit `Field`.
+ * Унифицированная валидация для `Field`.
  *
  * Контракт:
  * - validators: список функций (value -> string|null|undefined)
  * - validateOn: когда запускать валидацию (`change`/`blur`/`submit`)
  * - хук влияет только на `isError`, но не на значение (не трансформирует input)
  *
- * Маппинг `submit`:
- * - в UI-kit нет общего события "submit"
- * - поэтому `submit` триггерится при нажатии Enter в `onKeyDown`
+ * Режим `submit`:
+ * у поля нет нативного submit-события — валидация запускается по Enter в `onKeyDown`.
  */
 export function useFieldValidation<TValue>({
 	value,
